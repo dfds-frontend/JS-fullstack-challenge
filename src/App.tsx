@@ -1,25 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Global, css } from "@emotion/react";
+import React from "react";
+import { Navbar } from "./components/Navbar";
+import Grid from "@mui/material/Grid";
+import { SailingTimeTable } from "./components/SailingTimeTable/SailingTimeTable";
+import { SailingTimeContextProvider } from "./contexts/SailingTimeContext";
+import { SailingTimeFilter } from "./components/SailingTimeFilter";
+import { CreateSailingForm } from "./components/CreateSailingForm";
+import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Global
+        styles={css`
+          body {
+            margin: 0;
+          }
+        `}
+      />
+      <Navbar />
+      <SailingTimeContextProvider>
+        <Grid container spacing={2}>
+          <Grid item xs={8}>
+            <SailingTimeTable />
+          </Grid>
+          <Grid item xs={4}>
+            <LocalizationProvider dateAdapter={AdapterDateFns}>
+              <SailingTimeFilter />
+              <CreateSailingForm />
+            </LocalizationProvider>
+          </Grid>
+        </Grid>
+      </SailingTimeContextProvider>
+    </>
   );
 }
 
