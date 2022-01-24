@@ -1,46 +1,23 @@
-# Getting Started with Create React App
+# Fullstack JS developer challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Running the code
 
-## Available Scripts
+This is the starting point for Fullstack JS technical interview. To get started:
 
-In the project directory, you can run:
+1. Clone the repo on your local machine
+2. Install dependencies `npm i`
+3. Run the code `npm start` and it should available at `localhost:3000`
 
-### `npm start`
+## The challange
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Filter schedule by date range
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+On its / page, the app lists DFDS sailing schedules for our ferries, currently you are able to filter that list by port and by name of the vessel. Your task is to implement an additional filter to be able to set a date range for which the schedules will be displayed.
 
-### `npm test`
+### Add validation to vessel field
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+When you navigate to /schedule/add, you are presented with a form that allows you to add a sailing time to the schedules. For now, the vessel field is just a text field and you can write any name you want and the form will accept it. At the top of the file, where the add sailing time form is declared, you will find an enum named VesselName. Your task is to replace the text field for vessel name with a select name that is populated with values from the aforementioned enum. Additionally, it would be nice that the field would be required so that the user cannot just leave it empty.
 
-### `npm run build`
+### Replace current backend with your own nodejs backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Write now data is fetched from and written to a SaaS backend. Your task here is to replace that backend with your own nodejs backend that would have an endpoint for fetching schedules and another for adding a new schedule to the existing one. Here you’re invited to do a very minimal solution - you can declare and store data in an in-memory variable and do not worry about adding validation for form submission.
