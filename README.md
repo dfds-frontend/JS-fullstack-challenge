@@ -20,4 +20,4 @@ When you navigate to /schedule/add, you are presented with a form that allows yo
 
 ### Replace current backend with your own nodejs backend
 
-Write now data is fetched from and written to a SaaS backend. Your task here is to replace that backend with your own nodejs backend that would have an endpoint for fetching schedules and another for adding a new schedule to the existing one. Here you’re invited to do a very minimal solution - you can declare and store data in an in-memory variable and do not worry about adding validation for form submission.
+Currently data rendered in the table is hard-coded in client state. Your task here is to replace that backend with your own nodejs backend that would have an endpoint for fetching schedules and another for adding a new schedule to the existing one. Here you’re invited to do a very minimal solution - you can declare and store data in an in-memory variable and do not worry about adding validation for form submission.
