@@ -16,7 +16,7 @@ On its / page, the app lists DFDS sailing schedules for our ferries, currently y
 
 ### Add validation to vessel field
 
-When you navigate to /schedule/add, you are presented with a form that allows you to add a sailing time to the schedules. For now, the vessel field is just a text field and you can write any name you want and the form will accept it. At the top of the file, where the add sailing time form is declared, you will find an enum named VesselName. Your task is to replace the text field for vessel name with a select name that is populated with values from the aforementioned enum. Additionally, it would be nice that the field would be required so that the user cannot just leave it empty.
+At the bottom right side of the page, you are presented with a form that allows you to add a sailing time to the schedules. For now, the vessel field is just a text field and you can write any name you want and the form will accept it. At the top of the file, where the add sailing time form is declared, you will find an enum named VesselName. Your task is to replace the text field for vessel name with a select name that is populated with values from the aforementioned enum. Additionally, it would be nice that the field would be required so that the user cannot just leave it empty.
 
 ### Replace current backend with your own nodejs backend
 
